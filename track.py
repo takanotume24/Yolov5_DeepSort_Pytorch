@@ -63,7 +63,7 @@ def draw_boxes(img, bbox, identities=None, offset=(0,0)):
 def detect(opt, save_img=False):
     out, source, weights, view_img, save_txt, imgsz = \
         opt.output, opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
-    webcam = source == '0' or source == '1' or source == '2' or source.startswith('rtsp') or source.startswith('http') or source.endswith('.txt')
+    webcam = source == '2' or source.startswith('rtsp') or source.startswith('http') or source.endswith('.txt')
 
     # initialize deepsort
     cfg = get_config()
